@@ -1,0 +1,45 @@
+int = [1, 0]
+
+
+print('Tabla de disyuncion')
+print('-'*30)
+print('p\tq\tr\tp v q')
+print('-'*30)
+for x in int:
+    for y in int:
+        print(x, y, x or y, sep = '\t')
+
+print()
+print('Tabla de conjuncion')
+print('-'*30)
+print('p\tq\tr\tp ^ q')
+print('-'*30)
+for x in int:
+    for y in int:
+        print(x, y, x and y, sep = '\t')
+        
+print()
+print('Tabla de negacion\n')
+print('-'*13)
+print('p\t¬ p')
+print('-'*13)
+for x in int:
+    print(x, not x, sep = '\t')
+
+print()
+print('Tabla bicondcional') 
+print('-'*30)
+print('p\tq\tr\tp <==> q')
+print('-'*30)
+for y in int:
+    for x in int:
+        print(y, x,  not(y ^ x), sep = '\t')
+print()
+print('Tabla condcional') 
+print('-'*30)
+print('p\tq\tr\tp ==> q')
+print('-'*30)
+for x in int:
+    for y in int:
+        print(x, y,  x >= y, sep = '\t')
+print()
